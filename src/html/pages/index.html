@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestAppVueNoCLI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main" id='app'>
+        <section class="header">
+            <div class="xln-container">
+                <div class="header__wrapper">
+                    <nav class="header__menu menu-header">
+                        <ul class='menu-header__nav nav'>
+                            <li class="nav__item">Каталог</li>
+                            <li class="nav__item">Доставка</li>
+                            <li class="nav__item">Оплата</li>
+                            <li class="nav__item">Контакты</li>
+                            <li class="nav__item">О компании</li>
+                        </ul>
+                    </nav>
+                    <form action="" class='header__search search-header' name='search-header'>
+                        <input class='search-header__input' type="text" placeholder="Поиск по названию картины">
+                        <button class='button search-header__button' type="submit">Найти</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="content">
+            <div class="xln-container">
+                <h1 class="content__title">Картины эпохи Возрождения</h1>
+                <div class="content__wrapper">
+                    <div class="content__card card" v-for='lot in lots' :key="lot.id" :class="[ lot.isActive ? lot.activeClass : '' , lot.isSold ? lot.sold : '']" v-for='lot in lots'>
+                        <div class="card__wrapper">
+                            <div class="card__image">
+                                <img :src="lot.imgSrc" alt="">
+                            </div>
+                            <h2 class="card__title">{{lot.title}}</h2>
+                            <div class="card__info-price">
+                                <div class="card__price">
+                                    <div class="card__last-price">{{lot.lastPrice}}</div>
+                                    <div class="card__real-price">{{lot.realPrice}}</div>
+                                </div>
+                                <button type='button' class="button card__button" @click="buttonClick(lot)">{{lot.button}}</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class=" footer">
+            <div class="xln-container">
+                <div class="footer__wrapper">
+                    <nav class="footer__menu menu-header">
+                        <ul class='menu-footer__nav nav'>
+                            <li class="nav__item">Каталог</li>
+                            <li class="nav__item">Доставка</li>
+                            <li class="nav__item">Оплата</li>
+                            <li class="nav__item">Контакты</li>
+                            <li class="nav__item">О компании</li>
+                        </ul>
+                    </nav>
+                    <div class="footer__contacts">
+                        <div class="footer__phone">
+                            <img src="./img/phone.svg" alt="">
+                            <span>
+                                +7 (812) 555-55-55
+                            </span>
+                        </div>
+                        <div class="footer__adress">
+                            <img src="./img/adress.svg" alt="">
+                            <span>
+                                г. Санкт-Петербург, ул. Ефимова, 3
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="js/app.bundle.js"></script>
+</body>
+
+</html>

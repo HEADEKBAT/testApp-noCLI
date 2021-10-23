@@ -1,0 +1,119 @@
+.header,
+.footer {
+    padding: 23px 0;
+    border-bottom: 1px solid var(--gray);
+
+    &__wrapper {
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 0px 0px 0px 20px;
+        @include media-up(xl) {
+            justify-content: space-between;
+            flex-direction: row;
+        }
+    }
+}
+
+.menu-header,
+.menu-footer {
+    align-items: center;
+    width: 100%;
+    &__nav {
+    }
+}
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+
+    @include media-up(xl) {
+        padding-left: 18px;
+        justify-content: start;
+    }
+
+    &__item {
+        margin: 12px 0px 12px 12px;
+        cursor: pointer;
+        font-size: 12px;
+
+        @include media-up(sm) {
+            margin: 17px 0px 17px 24px;
+            font-size: 14px;
+        }
+
+        @include media-up(xl) {
+            margin: 17px 0px 17px 48px;
+        }
+    }
+}
+
+.search-header {
+    display: flex;
+
+    @include media-down(xs) {
+        width: 100%;
+    }
+
+    &__input {
+        color: var(--xln-lightGray);
+        border: solid 1px #e1e1e1;
+        font-size: 12px;
+        width: 100%;
+        height: 42px;
+        letter-spacing: 0.6px;
+
+        @include media-up(sm) {
+            width: 294px;
+            height: 48px;
+            font-size: 14px;
+        }
+    }
+}
+.footer {
+    background-color: #eceaea;
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        @include media-up(sm) {
+            flex-direction: row;
+        }
+    }
+
+    &__phone {
+        word-wrap: normal;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            width: 160px;
+            margin-left: 8px;
+        }
+
+        img {
+            height: 16px;
+            width: 16px;
+        }
+    }
+
+    &__adress {
+        margin-left: 42px;
+        word-wrap: normal;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            width: 283px;
+            margin-left: 8px;
+        }
+
+        img {
+            height: 16px;
+            width: 16px;
+        }
+    }
+}

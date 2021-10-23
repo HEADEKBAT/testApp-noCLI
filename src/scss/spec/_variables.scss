@@ -1,0 +1,30 @@
+$grid-breakpoints: (
+    xs: 360,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1140px,
+    xxl: 1200px,
+    xxxl: 1300px,
+    xxxxl: 1400px,
+);
+
+:root {
+    // font
+    --main-font: "Merriweather", sans-serif;
+
+    // default colors
+    --white: #ffffff;
+    --black: #343030;
+    --gray: #e1e1e1;
+    --gray-main: #f6f3f3;
+    --light-gray: #9f9f9f;
+    --dark: #403432;
+
+    // enlimited colors
+    --xln-light: var(--white);
+    --xln-black: var(--black);
+    --xln-dark: var(--dark);
+    --xln-lightGray: var(--light-gray);
+    --xln-mainBG: var(--gray-main);
+}

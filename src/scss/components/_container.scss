@@ -1,0 +1,16 @@
+.xln-container {
+    margin: 0 auto;
+    padding: 0 10px;
+    @include media-up(sm) {
+        padding: 0px 10px;
+    }
+
+    @include media-up(md) {
+        // padding: 0 20px 0 40px;
+    }
+
+    @include media-up(xxl) {
+        max-width: 1216px;
+        padding: 0 10px;
+    }
+}

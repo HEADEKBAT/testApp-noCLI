@@ -1,0 +1,23 @@
+.button {
+    // padding: 14px 36px;
+    height: 42px;
+    width: 90px;
+    font-size: 12px;
+    letter-spacing: 1.1px;
+    font-weight: 700;
+    font-family: "Merriweather";
+    background-color: var(--xln-dark);
+    color: var(--xln-light);
+
+    @include media-up(sm) {
+        height: 48px;
+        width: 122px;
+        font-size: 14px;
+    }
+}
+
+.card__button {
+    width: 118px;
+    height: 48px;
+    margin-left: 20px;
+}
